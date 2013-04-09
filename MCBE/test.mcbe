@@ -1,0 +1,3 @@
+FIN:	LD AC
+	JMP FIN
+AC:	0
