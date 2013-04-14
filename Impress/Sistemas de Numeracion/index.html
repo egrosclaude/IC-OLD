@@ -47,139 +47,262 @@
         
     -->
     <div class="big step centered" data-x="-2000" data-y="-1500">
-	    <p><strong>Sistemas de numeración</strong></p>
+	    <p><strong>Representación de datos numéricos</strong></p>
     </div>
     
+    
+    
     <div class="step" data-x="-2000" data-y="-1500" data-z="-1500">
-    <q><strong>Contando con dígitos</strong>
+    <q><strong>Vimos sistemas numéricos</strong>
     <ol>
-    	<li>Asignamos los dígitos a cada objeto
-    	<li>Al acabarse los dígitos anotamos 1 a la izquierda y volvemos a cero
-    	<li>Vamos anotando las veces que se agotó la secuencia en la posición de la izquierda
+    	<li>Decimal, hexadecimal, octal, binario
+    	</br><strong>Simplificaciones</strong>
+    	<ol>
+    	<li>Siempre hemos representado <strong>enteros</strong>
+    	<li>Siempre <strong>no negativos</strong>
+    	<li>Suponíamos <strong>infinitos dígitos</strong>
+    	</ol>
     </ol>
 	</q>
    </div>
 
     <div class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
-    <q><strong>Contando con dígitos</strong>
+    <q><strong>Técnicas de representación numérica</strong>
     <ol>
-    <li>Al acabarse la secuencia en la posición de la izquierda, tomamos una posición más a la izquierda y repetimos desde cero en todas las demás posiciones
+	    <li>Las computadoras utilizan campos de <i>n</i> dígitos binarios
+	    <li>Con signo o sin signo
+	    <li>Con mayor o menor rango de representación (<strong>RR</strong>)
     </ol>
     </q>
     </div>
 
-	<div class="step" data-x="-500" data-y="-1500" data-z="-1500">
-    <q><strong>Notemos que</strong></q>
-    <ol>
-		<li>El sistema es posicional (los dígitos tienen diferente valor relativo, según la posición <strong>&#8680;</strong> <u>2</u>, 1<u>2</u>0, <u>2</u>05, <u>2</u>013)
-		<li>La cantidad de dígitos del sistema es arbitraria
-    </ol>
-    </div>
-
-    
 	<div class="step" data-x="0" data-y="-1500" data-z="-1500">
-    <q><strong>Base del sistema posicional</strong>
+    <q><strong>Representación sin signo</strong>
      <ol>
-   <li>Cantidad de dígitos diferentes del sistema
-	<li>Los números se expresan como suma de potencias de la base <strong>ordenadas</strong> y <strong>completas</strong>
-	<li>2013 = 2*10<sup>3</sup> + 0*10<sup>2</sup> + 1*10<sup>1</sup> + 3*10<sup>0</sup>
-    </ol>
+   <li>Sólo puede expresar números no negativos
+   <li>Rango de representación [0, 2<sup>n</sup>-1]
+   <li>Con 8 bits: [0, 255]
+   <li>Con 16 bits: [0, 65535]
+   </ol>
    </q>
     </div>
 
-	<div class="step" data-x="0" data-y="-1500" data-z="-1500">
-    <q><strong>Números y representación</strong>
-     <ol>
-   <li>Los <strong>nombres</strong> que ponemos a los números vienen del sistema decimal (con base 10)
-	<li>Si eligiéramos otra base, los coeficientes serían diferentes
-	<li>2013<sub>(10</sub> = ? * 9<sup>3</sup> + ? * 9<sup>2</sup> + ? * 9 <sup>1</sup> + ? * 9<sup>0</sup> = ????<sub>(9</sub>
+	<div class="step" data-x="500" data-y="-1500" data-z="-1500">
+    <q><strong>Representación con signo</strong></q>
+    <ol>
+		<li><strong>Varias técnicas</strong>
+		<br/>Signo-magnitud (<strong>S-M</strong>)
+		<br/>Complemento a 2 (<strong>C2</strong>)
+		<br/>En exceso a 2<sup>n-1</sup>
     </ol>
+	</q>
+    </div>
+
+	<div class="step" data-x="1500" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-magnitud</strong>
+     <ol>
+   <li>El primer bit representa el signo
+   <li>El resto, el valor absoluto
+   </ol>
    </q>
     </div>
 
-
-
-
-	<div class="step" data-x="1000" data-y="-1500" data-z="-1500">
-    <q><strong>Sistema binario</strong></q>
-    <ol>
-		<li>Dos dígitos, 0 y 1
-		<li>1010101<sub>(2</sub> = ?
-    </ol>
+	<div class="step" data-x="2500" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+   <li>7<sub>(10</sub> = 00000111<sub>(2</sub>
+   <li>-7<sub>(10</sub> = 10000111<sub>(2</sub>
+   <li>RR: [-127, 127]
+   </ol>
+   </q>
     </div>
 
-	
-	<div class="step" data-x="2000" data-y="2000" data-z="-1500">
-    <q><strong>Contar con binarios</strong></q>
-    <ol>
-    	<li>Asignamos los dígitos a cada objeto
-		<li>0, 1 <strong>&#8680;</strong> se acabó la secuencia
-    </ol>
-    </div>
-
-	<div class="step" data-x="2500" data-y="2500" data-z="-1500">
-    <q><strong>Contar con binarios</strong></q>
-    <ol>
-    	<li>Al acabarse los dígitos anotamos 1 a la izquierda y volvemos a cero
-    	<li>10, 11 <strong>&#8680;</strong> se acabó la secuencia
-    </ol>
-    </div>
-
-	<div class="step" data-x="3000" data-y="3000" data-z="-1500">
-    <q><strong>Contar con binarios</strong></q>
-    <ol>
-    	<li>Vamos anotando las veces que se agotó la secuencia en la posición de la izquierda
-    	<li>100, 101, 110, 111 <strong>&#8680;</strong> se acabó la secuencia
-    </ol>
-    </div>
-
-	
 	<div class="step" data-x="2000" data-y="-1500" data-z="-1500">
-    <q><strong>Sistema Hexadecimal</strong></q>
-    <ol>
-		<li>16 dígitos
-		<li>0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
-		<li>F7A<sub>(16</sub> = ?
-    </ol>
+    <q><strong>RR en Signo-Magnitud con n bits</strong>
+     <ol>
+   <li>Hay n bits pero uno es para el signo
+   <br/><strong>&#8680;</strong> El valor absoluto está en n-1 bits
+   <li>RR sin signo n-1 bits: [0, 2<sup>n-1</sup>-1] 
+   <li>RR S-M n bits: [-(2<sup>n-1</sup>-1), 2<sup>n-1</sup>-1]
+   </ol>
+   </q>
     </div>
 
 
-	<div id="conversion" class="step" data-x="3000" data-y="-1500" data-z="-1500">
-    <q><strong>De decimal a otras bases</strong></q>
-    <ol>
-		<li>El último cociente y los restos son menores que la base
-    </ol>
+	<div class="step" data-x="3000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+		<li>9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-128<sub>(10</sub> = ?<sub>(2</sub>
+   </ol>
+   </q>
+   </div>
+
+
+	<div class="step" data-x="3000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
+		<li>-9<sub>(10</sub> = 10001001<sub>(2</sub>
+		<li>50<sub>(10</sub> = 00110010<sub>(2</sub>
+		<li>-50<sub>(10</sub> = 10110010<sub>(2</sub>
+		<li>-128<sub>(10</sub> = Imposible
+   </ol>
+   </q>
+   </div>
+
+	<div id="sm" class="step" data-x="2500" data-y="-1500" data-z="0">
+		<ol>
+		</ol>
     </div>	
-    
-	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
-    <q><strong>Otras bases a decimal</strong></q>
+
+
+	<div class="step" data-x="4000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2</strong>
     <ol>
-		<li>¡Aplicamos el desarrollo en suma de potencias!
+		<li><strong>Positivos</strong>
+		<br/>Se representan como en S-M
+		<li><strong>Negativos</strong>
+		<br/>1. Se expresa su valor absoluto
+		<br/>2. Se invierten todos los bits
+		<br/>3. Se suma 1
+    </ol>
+    </q>
+    </div>
+    
+
+	<div class="step" data-x="4000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li><strong>17 es positivo</strong>
+		<br/>17 = 00010001
+		<li><strong>-17 es negativo</strong>
+		<br/>1. 17 = 00010001
+		<br/>2. Invirtiendo, 11101110
+		<br/>3. 11101110 + 1 = 11101111
+    </ol>
+    </div>
+    
+	<div class="step" data-x="4500" data-y="-1500" data-z="-1500">
+    <q><strong>Pasar de C2 en 8 bits a decimal</strong></q>
+    <ol>
+		<li><strong>00010001 es positivo</strong>
+		<br/>00010001 = 17
+		<li><strong>11101111 es negativo</strong>
+		<br/>1. Invirtiendo 1101111 = 0010000
+		<br/>2. 0010000 + 1 = 0010001 = 17
+		<br/>3. -1 * 17 = -17 
+    </ol>
+    </div>
+    
+	<div class="step" data-x="4600" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li>9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-128<sub>(10</sub> = ?<sub>(2</sub>
+    </ol>
+    </div>
+    
+    
+	<div class="step" data-x="4600" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
+		<li>-9<sub>(10</sub> = 11110111<sub>(2</sub>
+		<li>50<sub>(10</sub> = 00110010<sub>(2</sub>
+		<li>-50<sub>(10</sub> = 11001110<sub>(2</sub>
+		<li>-128<sub>(10</sub> = 10000000<sub>(2</sub> 
+    </ol>
+    </div>
+    
+    
+	<div class="step" data-x="4700" data-y="-1500" data-z="-1500">
+    <q><strong>RR en C2 con n bits</strong>
+     <ol>
+     <li><strong>-128 = -2<sup>n-1</sup></strong> <strong>&#8680;</strong> ¡era imposible en S-M!
+   <li>RR S-M n bits: [-(2<sup>n-1</sup>-1), 2<sup>n-1</sup>-1]
+   <li>RR C2 n bits: [-(2<sup>n-1</sup>), 2<sup>n-1</sup>-1]
+   <li>El RR de C2 tiene un valor más que el de S-M 
+   </ol>
+   </q>
+    </div>
+   
+	<div id="wtf" class="step" data-x="4700" data-y="-1500" data-z="0">
+		<ol>
+		</ol>
+    </div>	
+        
+    	
+	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
+    <q><strong>Ventajas de C2 sobre S-M</strong></q>
+    <ol>
+    	<li>Un valor más en el RR
+		<li>El <strong>cero</strong> tiene una única representación
+		<li>Las cuentas se hacen bit a bit
+		<li>Fácil para la computadora
     </ol>
     </div>
 
 	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
-    <q><strong>Para pensar 1</strong></q>
+    <q><strong>Aritmética en complemento a 2</strong></q>
     <ol>
-		<li>Contar con los dedos, ¿es un sistema posicional?
-		<li>Si contáramos en binario con los dedos, ¿Hasta cuánto podríamos contar con una mano? ¿Y con las dos? 
-    </ol>
-    </div>
-    
-    <div class="step" data-x="9000" data-y="-1500" data-z="-1500">
-    <q><strong>Para pensar 2</strong></q>
-    <ol>
-		<li>¿Cómo sería un sistema en base <strong>seis</strong> con ambas manos? La derecha contando las unidades y la izquierda "las seisenas"...
-		<li>¿Hasta cuánto podríamos contar con este sistema? 
+    	<br/><strong>A + B</strong>
+		<li>Las cuentas se hacen bit a bit
+		<br/><strong>A - B</strong> 
+		<li>Se complementa B y se suman bit a bit 
     </ol>
     </div>
 
+	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
+    <q><strong>A + B en complemento a 2</strong></q>
+    <ol>
+    	</br>
+    	<li><strong>A = 9, B = 23</strong>
+		<li>A = 00001001, B = 00010111
+		<li>A + B = ?
+    </ol>
+    </div>
+
+	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
+    <q><strong>A - B en complemento a 2</strong></q>
+    <ol>
+        	</br>
+    	<li><strong>A = 9, B = 23</strong>
+		<li>A = 00001001, B = 00010111
+		<li>-B = c2(B) = 11101001
+		<li>A - B = A + c2(B) = ?
+    </ol>
+    </div>
+
+	<div id="ojoalc2" class="step" data-x="9000" data-y="-1500" data-z="0">
+		<ol>
+		</ol>
+    </div>	
+        
+	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
+    <q><strong>Overflow o desbordamiento</strong></q>
+    <ol>		
+    	<li>Puede ocurrir al sumar dos positivos o dos negativos
+    	<li>Nunca ocurre al sumar un + con un -
+		<li>Condición sobre los bits de <strong>carry</strong> o acarreo <strong>&#8680;</strong> ¡ver la teoría!
+    </ol>
+    </div>
+
+    
 <div class="fadetoblack step" data-x="9000" data-y="-1500" data-z="-1500">
     </div>
     
 <div class="fadetowhite step" data-x="9000" data-y="-1500" data-z="-1500">
     </div>
     
+	
+
 
 	
 </div>

@@ -624,6 +624,37 @@ sub {
 }
 
 
+#sm {
+    width: 800px;
+    padding-top: 0px;
+    padding-bottom: 700px;
+	background-image:url('sm.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+}
+
+
+#wtf {
+    width: 800px;
+    padding-bottom: 500px;
+	background-image:url('wtf2.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+#ojoalc2 {
+    width: 800px;
+    padding-bottom: 600px;
+	background-image:url('ojoc2.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+}
+
+
 /*
     And the "it's in 3D" step again brings some 3D typography - just for fun.
 
