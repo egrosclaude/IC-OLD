@@ -232,7 +232,7 @@ a:focus {
 
 .impress-enabled .transp {
     margin: 0;
-	opacity: 1;
+	opacity: 0.1;
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
     -ms-transition:     opacity 1s;
@@ -673,7 +673,41 @@ sub {
     background-size: 80% auto;
 }
 
+#ieee754 {
+    width: 800px;
+    padding-bottom: 200px;
+	background-image:url('ieee754.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}
 
+#exceso127 {
+    width: 800px;
+    padding-bottom: 400px;
+	background-image:url('exceso127.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}
+
+#resumen {
+    width: 800px;
+    padding-bottom: 300px;
+	background-image:url('resumen.svg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+#pfadec {
+    width: 800px;
+    padding-bottom: 100px;
+	background-image:url('ieee754.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}
 /*
     And the "it's in 3D" step again brings some 3D typography - just for fun.
 

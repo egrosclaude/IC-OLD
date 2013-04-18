@@ -142,7 +142,7 @@
    </div>
 
 
-	<div class="step" data-x="6000" data-y="-1500" data-z="-1500">
+	<div class="step" data-x="5000" data-y="-1500" data-z="-1500">
     <q><strong>Signo-Magnitud en 8 bits</strong>
      <ol>
 		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
@@ -210,7 +210,7 @@
     </div>
     
     
-	<div class="step" data-x="11000" data-y="-1500" data-z="-1500">
+	<div class="step" data-x="10000" data-y="-1500" data-z="-1500">
     <q><strong>Complemento a 2 en 8 bits</strong></q>
     <ol>
 		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
@@ -249,7 +249,7 @@
     </ol>
     </div>
 
-	<div class="step" data-x="14000" data-y="-1500" data-z="-1500">
+	<div class="step" data-x="14000" data-y="-2500" data-z="-1500">
     <q><strong>Aritmética en complemento a 2</strong></q>
     <ol>
     	<br/><strong>A + B</strong>
@@ -259,7 +259,7 @@
     </ol>
     </div>
 
-	<div class="step" data-x="15000" data-y="-1500" data-z="-1500">
+	<div class="step" data-x="15000" data-y="-2500" data-z="-1500">
     <q><strong>A + B en complemento a 2</strong></q>
     <ol>
     	</br>
@@ -269,7 +269,7 @@
     </ol>
     </div>
 
-	<div class="step" data-x="16000" data-y="-1500" data-z="-1500">
+	<div class="step" data-x="16000" data-y="-2500" data-z="-1500">
     <q><strong>A - B en complemento a 2</strong></q>
     <ol>
         	</br>
@@ -323,7 +323,7 @@
     </ol>
     </div>
     
-	<div class="step" data-x="-2000" data-y="0" data-z="-1500">
+	<div class="step transp" data-x="-2000" data-y="0" data-z="-1500">
     <q><strong>Decimal fraccionario a base 2</strong></q>
     <ol>		
     	<li>Se separan parte entera (PE) y parte fraccionaria (PF)
@@ -332,7 +332,7 @@
     </ol>
     </div>
     
-    <div class="step" data-x="-1000" data-y="0" data-z="-1500">
+    <div class="step transp" data-x="-2500" data-y="1000" data-z="1000">
     <q><strong>Decimal fraccionario a base 2</strong></q>
     <ol>		
     	<li>3.625 = PE + PF = 3 + 0.625
@@ -341,7 +341,7 @@
     </ol>
     </div>
 
-    <div class="step" data-x="0" data-y="0" data-z="-1500">
+    <div class="step transp" data-x="-1500" data-y="1000" data-z="1000">
     <q><strong>Decimal fraccionario a base 2</strong></q>
     <ol>		
     	<li>PF * 2 = 0.625 * 2 = <strong>1</strong>.25 <strong>&#8680;</strong> 1
@@ -356,7 +356,7 @@
     <div class="step" data-x="1000" data-y="0" data-z="-1500">
     <q><strong>Representación de punto fijo</strong></q>
     <ol>		
-    	<li>"Punto fijo en ocho dígitos binarios con 3 decimales"
+    	<li>"Punto fijo en ocho dígitos binarios con 3 fraccionarios"
     	<li>El punto no se escribe pero se asume
     	<li>00011101 = 00011.101 = 3.625
     </ol>
@@ -394,19 +394,19 @@
     <ol>	
 		<li><i>e</i> = 0.000000001 m = 1 * 10<sup>-9</sup> m
 		<li><i>v</i> = 300000000 m/s = 3 * 10<sup>8</sup> m/s
-		<li><i>t = e / v</i> = 1 * 3 * 10<sup>-9</sup> / 10<sup>8</sup> s		
-		<li><i>t</i> = 1 * 3 * 10<sup>-9-8</sup> s
-		<li><i>t</i> = 3 * 10<sup>-17</sup> s
+		<li><i>t = e / v</i> = (1 * 10<sup>-9</sup>) / (3 * 10<sup>8</sup>) s		
+		<li><i>t</i> = 1 / 3 * 10<sup>-9-8</sup> s
+		<li><i>t</i> = 0.333 * 10<sup>-17</sup> s
 	    </ol>
     </div>
 
     <div class="step" data-x="5000" data-y="0" data-z="-1500">
     <q><strong>Notación científica</strong></q>
     <ol>	
-		<li>3 * 10<sup>-17</sup> s
-		<li>Coeficiente = 3
+		<li>Coeficiente = 0.333
 		<li>Exponente = -17
 		<li>Normalizada: 1 <= coeficiente < base
+		<li>0.333 * 10<sup>-17</sup> = 3.33 * 10<sup>-18</sup> s
 	</ol>
     </div>
 
@@ -414,25 +414,33 @@
     <div class="step" data-x="6000" data-y="0" data-z="-1500">
     <q><strong>Representación en punto flotante</strong></q>
     <ol>	
-		<li>1 bit de signo
-		<li>8 bits para el exponente
-		<li>23 bits para la mantisa
+		<li>1 bit de <strong>signo</strong>
+		<li>8 bits para el <strong>exponente</strong>
+		<li>23 bits para la <strong>mantisa</strong>
 		<li><i>IEEE 754 single precision</i>
 	    </ol>
     </div>
 
-    <div class="step transp" data-x="7000" data-y="0" data-z="-1500">
-    <q><strong>Decimal a punto flotante</strong></q>
+    <div id="ieee754" class="step centered" data-x="6000" data-y="0" data-z="-2500">
+    <q><strong>IEEE 754 single precision</strong></q>
     <ol>	
-		<li>1. Escribo el valor absoluto en base 2
-		<li>2. Lo paso a notación científica en base 2 normalizada
-		<li>3. <strong>Ajusto</strong> el exponente
-		<li>4. Guardo el coeficiente <strong>sin el 1</strong> en la mantisa
+	    </ol>
+    </div>
+
+
+
+    <div class="step transp" data-x="7000" data-y="0" data-z="-1500">
+    <q><strong>Decimal fraccionario a p. flotante</strong></q>
+    <ol>	
+		<li>1. Escribir el valor absoluto en base 2
+		<li>2. Pasarlo a notación científica en base 2, normalizada
+		<li>3. <strong>Ajustar</strong> el exponente y guardar el signo
+		<li>4. Guardar el coeficiente <strong>sin parte entera</strong> en la mantisa
 	    </ol>
     </div>
 
     <div class="step transp" data-x="8000" data-y="500" data-z="0">
-    <q><strong>2. Not. científ. normalizada</strong></q>
+    <q><strong>2. Normalizar not. científ.</strong></q>
     <ol>	
 		<li>Desplazo el punto fraccionario hasta dejar un 1 en la parte entera
 		<li>Compenso la multiplicación o división por 2 que hice
@@ -441,8 +449,8 @@
     </ol>
     </div>
 	
-    <div class="step transp" data-x="9000" data-y="1000" data-z="1000">
-    <q><strong>3. Ajuste del exponente</strong></q>
+    <div class="step transp" data-x="9000" data-y="1200" data-z="2000">
+    <q><strong>3. Ajustar el exponente</strong></q>
     <ol>	
 		<li>El exponente puede ser positivo o negativo
 		<li>Representación <strong>en exceso a 127</strong>
@@ -450,27 +458,54 @@
     </ol>
     </div>
 
-    <div class="step transp" data-x="10000" data-y="1500" data-z="2000">
+    <div id="exceso127" class="wide step centered" data-x="8800" data-y="1300" data-z="500">
+    <q><strong>Representación en exceso a 127</strong></q>
+    <ol>	
+    </ol>
+    </div>
+
+	
+<!--    <div class="step transp" data-x="8400" data-y="800" data-z="500"> -->
+    <div class="step transp" data-x="9000" data-y="1200" data-z="2000">
+    <q><strong>3. Ajustar el exponente</strong></q>
+    <ol>	
+		<li>El exponente puede ser positivo o negativo
+		<li>Representación <strong>en exceso a 127</strong>
+		<li>Se le suma 127 para obtener un número no negativo 
+    </ol>
+    </div>
+
+
+    <div class="step transp" data-x="9500" data-y="1500" data-z="3000">
     <q><strong>4. Guardar el coeficiente</strong></q>
     <ol>	
 		<li>El primer dígito es siempre 1
 		<li>No hace falta almacenarlo
+		<li>Se almacena <strong>coeficiente - 1</strong>
     </ol>
     </div>
     
-    <div class="step" data-x="12000" data-y="0" data-z="3000">
+    <div id="pfadec" class="wide step centered" data-x="12000" data-y="0" data-z="3000">
     <q><strong>Punto Flotante a decimal</strong></q>
     <ol>	
-		<li>n = (-1)<sup>s</sup> * 2<sup>(e-127)</sup> * (1 + m) 
+    	<br/>
+		<strong>n = (-1)<sup>s</sup> * 2<sup>(e-127)</sup> * (1 + m) </strong>
     </ol>
     </div>
     
+    <div id="resumen" class="wide step centered" data-x="8400" data-y="5000" data-z="500">
+    <q><strong>Resumen</strong></q>
+    <ol>	
+    </ol>
+    </div>
+
+	
     
     
-<div class="fadetoblack step" data-x="12000" data-y="0" data-z="5000">
+<div class="fadetoblack step" data-x="8400" data-y="5000" data-z="500">
     </div>
     
-<div class="fadetowhite step" data-x="12000" data-y="0" data-z="5000">
+<div class="fadetowhite step" data-x="8400" data-y="5000" data-z="500">
     </div>
     
 	
