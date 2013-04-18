@@ -202,8 +202,6 @@ a:focus {
     line-height: 1.5;
 }
 
-
-
 .fadetowhite {
 	display: none
 }
@@ -223,7 +221,7 @@ a:focus {
 */
 .impress-enabled .step {
     margin: 0;
-    opacity: 0.0; /* transparencia */
+    opacity: 0;  /* transparencia */
 
     -webkit-transition: opacity 1s;
     -moz-transition:    opacity 1s;
@@ -231,6 +229,18 @@ a:focus {
     -o-transition:      opacity 1s;
     transition:         opacity 1s;
 }
+
+.impress-enabled .transp {
+    margin: 0;
+	opacity: 1;
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+
 
 .impress-enabled .step.active { opacity: 1 }
 
@@ -649,6 +659,15 @@ sub {
     width: 800px;
     padding-bottom: 600px;
 	background-image:url('ojoc2.jpg');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 80% auto;
+}
+
+#puntofijo {
+    width: 800px;
+    padding-bottom: 600px;
+	background-image:url('puntofijo.jpg');
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: 80% auto;
