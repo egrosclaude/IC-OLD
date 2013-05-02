@@ -6,14 +6,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Introducción a la Computación 2013</title>
     
-    <meta name="description" content="Sistemas de numeración" />
+    <meta name="description" content="Representación numérica" />
     <meta name="author" content="Eduardo Grosclaude" />
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
     <link href="css/impress-demo.css" rel="stylesheet" />    
-    <link rel="shortcut icon" href="favicon.png" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="shortcut icon" href="favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/x-icon"/>
 </head>
 
 <body class="impress-not-supported">
@@ -430,7 +430,7 @@
 
 
     <div class="step transp" data-x="7000" data-y="0" data-z="-1500">
-    <q><strong>Decimal fraccionario a p. flotante</strong></q>
+    <q><strong>Decimal a punto flotante</strong></q>
     <ol>	
 		<li>1. Escribir el valor absoluto en base 2
 		<li>2. Pasarlo a notación científica en base 2, normalizada
@@ -440,7 +440,7 @@
     </div>
 
     <div class="step transp" data-x="8000" data-y="500" data-z="0">
-    <q><strong>2. Normalizar not. científ.</strong></q>
+    <q><strong>2. Normalizar not. científica</strong></q>
     <ol>	
 		<li>Desplazo el punto fraccionario hasta dejar un 1 en la parte entera
 		<li>Compenso la multiplicación o división por 2<sup>algo</sup> que hice
@@ -480,10 +480,28 @@
     <q><strong>4. Guardar la mantisa</strong></q>
     <ol>	
 		<li>El primer dígito del coeficiente es siempre 1
-		<li>No hace falta almacenarlo
-		<li>Se guarda <strong>coeficiente - 1</strong>
+		<li><strong>&#8680;</strong> no hace falta almacenarlo
+		<li>Se guarda <strong>coeficiente - 1</strong> completando con ceros
     </ol>
     </div>
+    
+    <div class="step" data-x="9500" data-y="2500" data-z="3000">
+    <q><strong>Ejemplo: n = -5.5</strong></q>
+    <ol>	
+		<li>|n| = 5.5<sub>(10</sub> = 101.1<sub>(2</sub>
+		<li>101.1 = 1.011 * 2<sup>2</sup>
+		<li>s = 1
+		<li>e = 2 + 127 = 129
+		<li>1.011 - 1 = .011 <strong>&#8680;</strong> m = 011000...
+    </ol>
+    </div>
+    
+    <div id="ejemplofp" class="wide step centered" data-x="10500" data-y="2500" data-z="3000">
+    <q><strong>Ejemplo: n = -5.5</strong></q>
+    	<br/>
+		s = 1, e = 129, m = 011000...
+    </div>
+    
     
     <div id="pfadec" class="wide step centered" data-x="12000" data-y="0" data-z="3000">
     <q><strong>Punto Flotante a decimal</strong></q>

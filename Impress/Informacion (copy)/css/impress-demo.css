@@ -170,6 +170,7 @@ a:focus {
 .step {
     position: relative;
     width: 900px;
+    height: auto;
     padding: 40px;
     margin: 20px auto;
 
@@ -186,9 +187,10 @@ a:focus {
 
 .wide {
     position: relative;
+    height: auto;
     width: 900px;
     padding: 0px;
-    margin: 50px auto;
+    margin: 20px auto;
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -375,6 +377,7 @@ a:focus {
 
 .centered {
 	text-align: center;
+	width:800px;
 }
 
 sup { 
@@ -485,6 +488,9 @@ sup {
     background-position: bottom right;
     background-repeat: no-repeat;
 }
+
+
+
 
 #plano {
     width: 800px;
@@ -719,6 +725,66 @@ sup {
 .impress-on-overview .step {
     opacity: 1;
     cursor: pointer;
+}
+
+.overview {
+    position: absolute;
+	display: inline-block;
+    opacity: 1;
+    cursor: pointer;
+/*    width: 900px;
+    padding: 0px;
+    margin: 50px auto;*/
+	background-image: url('Middle-Earth.jpg');
+/*	width: 1024px;
+	height: 768px;
+	*/width: auto;
+	height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    transform-origin: 20% 80%;
+    transition: transform 0.5s linear;
+
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+
+
+.zoomable {
+	position: relative;
+	overflow: hidden;
+	margin: 1.5em 0 0 0;
+	display: inline-block;
+}
+
+.zoomable img {	
+	width: 100%;
+	height: 100%;
+	-webkit-transform-origin: 80% 80%; 
+	-webkit-transition: -webkit-transform 1s linear;
+	-moz-transform-origin: 80% 80%; 
+	-moz-transition: -moz-transform 1s linear;
+	}
+
+.zoomable img.zoom {
+	-webkit-transform: scale(2);
+	-moz-transform: scale(2);
 }
 
 

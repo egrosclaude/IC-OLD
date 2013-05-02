@@ -708,6 +708,18 @@ sub {
     background-repeat: no-repeat;
     background-size: 90% auto;
 }
+
+#ejemplofp {
+    width: 800px;
+    padding-bottom: 100px;
+	background-image:url('ejemploFP.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 90% auto;
+}
+
+
+
 /*
     And the "it's in 3D" step again brings some 3D typography - just for fun.
 
