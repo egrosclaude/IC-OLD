@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Introducción a la Computación 2013</title>
+    
+    <meta name="description" content="Modelo Computacional" />
+    <meta name="author" content="Eduardo Grosclaude" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+-->
+<div id="impress">
+    <!--
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+
+
+
+
+	<div class="centered wide step" data-x="-2000" data-y="-1500" data-z="-1500">
+    <strong>Sistemas Operativos</strong>
+    </div>
+
+	<div class="step" data-x="-1500" data-y="-1500" data-z="-1500">
+    <q><strong>Hardware</strong></q>
+	<ol>
+	<li>CPU y memoria
+	<li>Periféricos como pantallas, impresoras, unidades de disco, 
+teclados, mouses, placas de sonido...
+	</ol>
+	</div>
+	
+	<div class="step" data-x="-1500" data-y="-1500" data-z="-1500">
+    <q><strong>Software</strong></q>
+	<ol>
+	<li>Software de aplicación
+	<li>Aplicaciones de oficina, contables, financieras, científicas, educativas, juegos... 
+	<li>Usuarios con diferentes preferencias y objetivos
+	</ol>
+	</div>
+	
+
+	<div class="step" data-x="-1500" data-y="-1500" data-z="-1500">
+    <q><strong>Sistema de computación</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/sistcomp.png"/>
+	</div>
+	
+	<div class="step" data-x="-1500" data-y="-1500" data-z="-1500">
+    <q><strong>Sistema de computación</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/sistcomp2.png"/>
+	</div>
+	
+	<div id="evol1" class="wide step" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución de los sistemas</strong></q>
+		<li><i>Open shop</i>
+		<li>Sistemas <i>batch</i>
+		<li>Sistemas multiprogramados
+		<li>Sistemas de tiempo compartido
+		<li>Computación personal
+	</div>
+	
+	<div id="evol1" class="wide step" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1950/1960</strong></q>
+    	<li><i>Open Shop</i>
+		<li>Selección de aplicaciones a cargo del operador
+		<li>Carga <strong>manual</strong> de una única aplicación por vez
+		<li><strong>&#8680;</strong> Minimizar el tiempo ocioso
+	</div>
+	
+	
+	<div id="evol2" class="step" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1960/1970</strong></q>
+		<li>Tarjetas perforadas
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/tarjetas.png"/>
+    	<li>Cinta magnética, cinta de papel
+    	<li>Monitor residente
+	</div>
+	
+	<div id="evol3" class="step" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1960/1970</strong></q>
+		<li><strong>Sistemas por lotes (<i>batch</i>)</strong>
+		<li>Lotes de tareas (<i>jobs</i>)
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/batch.png"/>
+	</div>
+	
+	<div id="evol4" class="wide step" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1960/1970</strong></q>
+		<li>Alta carga del sistema en E/S
+		<li><strong>&#8680;</strong> Utilizar el tiempo de CPU mientras otros <i>jobs</i> hacen E/S
+		<li><strong>Sistemas multiprogramados</strong>
+	</div>
+	
+	<div id="evol5" class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1960/1970</strong></q>
+		<li><strong>Sistemas multiprogramados</strong>
+		<li>Compartir memoria, CPU, dispositivos
+		<li>Usuarios que compiten
+		<li>Protección
+	</div>
+	
+	<div id="evol6" class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1960/1970</strong></q>
+		<li><strong>Sistemas de tiempo compartido</strong> o multitarea
+		<li>Compartir memoria, CPU, dispositivos <strong>interactivamente</strong>
+		<li>Administración de CPU (<i>scheduling</i>)
+	</div>
+	
+	
+	<div id="sched1" class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Sistemas Batch</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/scheduling1.png"/>
+	</div>
+	
+	<div id="sched2" class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Sistemas Multiprogramados</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/scheduling2.png"/>
+	</div>
+	
+	
+	<div id="sched3" class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Sistemas de Tiempo Compartido</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/scheduling3.png"/>
+	</div>
+	
+	<div class="step" data-x="1000" data-y="-1500" data-z="-1500">
+    <q><strong>Evolución - 1970/1980</strong></q>
+    <ol>
+    <li>Microprocesador
+    <li>Mejores procesos de fabricación, componentes accesibles
+    <li>Computación personal
+    <li>IBM PC de arquitectura abierta
+	</div>
+    
+	<div class="step" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Problemas a resolver</strong></q>
+    <ol>
+    <li>Administración de CPU
+    <li>Administración de memoria
+    <li>Administración de Entrada/Salida
+	</div>
+
+	
+	<div class="step" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Servicios del Sistema Operativo</strong></q>
+    <ol>
+    <li>Ejecución de programas
+    <li>Administración de memoria
+    <li>Operaciones de Entrada/Salida
+    <li>Manejo de archivos
+    <li>Protección
+	</div>
+	
+
+	<div class="step" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Ejecución de programas</strong></q>
+    <ol>
+    <li>Interfaz de usuario, <i>shell</i>
+    <li>Proceso = <strong>Programa en ejecución</strong>
+    <li>Concurrencia vs. Paralelismo
+    <li>Planificación o <i>scheduling</i> <strong>&#8680;</strong> prioridades
+    <li>Estados de los procesos
+	</div>
+	
+	<div class="step centered" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Procesos</strong></q>
+      		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/procesos.png"/>
+	</div>
+		
+
+	<div class="step wide" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Administración de memoria</strong></q>
+    <ol>
+    <li>Un proceso tiene zonas de código y de datos
+    <li>Memoria virtual, direcciones virtuales
+    <li>Mapa de memoria asigna regiones físicas a regiones virtuales
+    <li>Espacio de almacenamiento o <i>swap</i>
+	</div>
+	
+	
+	<div class="step centered" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Memoria Virtual</strong></q>
+      		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/mvxp.jpg"/>
+	</div>
+		
+		
+	<div class="step centered" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Paginación de memoria</strong></q>
+      		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/memoria virtual.png"/>
+	</div>
+	
+		
+	<div class="step wide" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Operaciones de Entrada/Salida</strong></q>
+    <ol>
+    <li>Dispositivos y <i>drivers</i>
+    <li>Los procesos compiten por los recursos
+    <li>El SO coordina accesos a los dispositivos
+    <li>Los procesos los usan a través de <i>system calls</i>
+    <li>El proceso pasa a <i>suspendido</i> y libera la CPU 
+	</div>
+	
+	<div class="step wide" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Manejo de archivos</strong></q>
+    <ol>
+    <li>Sistema de archivos o <i>filesystem</i>
+    <li>Bloques de disco organizados como secuencias de bloques <strong>&#8680;</strong> archivos
+    <li>Datos y metadatos (nombre del archivo, dueño, fechas, tamaño, tipo, atributos)
+	</div>
+	
+	
+	<div class="wide step" data-x="1400" data-y="-1500" data-z="-1500">
+    <q><strong>Protección</strong></q>
+    <ol>
+    <li>Confinar los procesos a ciertos límites
+    <li>Utilizar los recursos únicamente a través de <i>system calls</i>
+    <li>Modo dual de operación: <strong>modo usuario y modo monitor</strong>
+    <li>Instrucciones privilegiadas en modo monitor
+	</div>
+	
+	
+	
+	<div class="step" data-x="8400" data-y="5000" data-z="-1500">
+    <q><strong>Componentes del sistema operativo</strong></q>
+    <ol>
+    <li><i>Shell</i> o intérprete de comandos
+    <li>Procesos del sistema o <i>daemons</i>
+    <li><i>Kernel</i> o núcleo
+   	</div>
+
+	
+    
+<div class="fadetoblack step" data-x="8400" data-y="5000" data-z="500">
+    </div>
+    
+<div class="fadetowhite step" data-x="8400" data-y="5000" data-z="500">
+    </div>
+    
+	
+
+<!--  -------------------------------- 
+	<div class="step" data-x="5000" data-y="-1500" data-z="-1500" data-rotate-y="30">
+    <q><strong>Motherboard 3</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/motherboard-callouts.jpg"/>
+	</div>
+
+	<div id="mother4" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/microat.jpg"/>
+	</div>
+
+	<div id="mother5" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/PacketFlow.png"/>
+	</div>
+
+		<div id="mother6" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/drawing.svg"/>
+	</div>
+ -------------------------------- -->
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/zoom.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+

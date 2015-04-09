@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Introducción a la Computación 2013</title>
+    
+    <meta name="description" content="Representación numérica" />
+    <meta name="author" content="Eduardo Grosclaude" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />    
+    <link rel="shortcut icon" href="favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" type="image/x-icon"/>
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+-->
+<div id="impress">
+    <!--
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div class="big step centered" data-x="-2000" data-y="-1500" data-z="1000">
+	    <p><strong>Representación de datos numéricos</strong></p>
+    </div>
+    
+    
+    
+    <div class="step" data-x="-2000" data-y="-1500" data-z="-1500">
+    <q><strong>Vimos sistemas numéricos</strong>
+    <ol>
+    	<li>Decimal, hexadecimal, octal, binario
+    	</br><strong>Simplificaciones</strong>
+    	<ol>
+    	<li>Siempre hemos representado <strong>enteros</strong>
+    	<li>Siempre <strong>no negativos</strong>
+    	<li>Suponíamos <strong>infinitos dígitos</strong>
+    	</ol>
+    </ol>
+	</q>
+   </div>
+
+    <div class="step wide" data-x="-1000" data-y="-1500" data-z="-1500">
+    <q><strong>Técnicas de representación numérica</strong>
+    <ol>
+	    <li>Las computadoras utilizan campos de <i>n</i> dígitos binarios
+	    <li>Con signo o sin signo
+	    <li>Con mayor o menor rango de representación (<strong>RR</strong>)
+    </ol>
+    </q>
+    </div>
+
+	<div class="step" data-x="0" data-y="-1500" data-z="-1500">
+    <q><strong>Representación sin signo</strong>
+     <ol>
+   <li>Sólo puede expresar números no negativos
+   <li>Rango de representación [0, 2<sup>n</sup>-1]
+   <li>Con 8 bits: [0, 255]
+   <li>Con 16 bits: [0, 65535]
+   </ol>
+   </q>
+    </div>
+
+	<div class="step" data-x="1000" data-y="-1500" data-z="-1500">
+    <q><strong>Representación con signo</strong></q>
+    <ol>
+		<li><strong>Varias técnicas</strong>
+		<br/>Signo-magnitud (<strong>S-M</strong>)
+		<br/>Complemento a 2 (<strong>C2</strong>)
+		<br/>En exceso a 2<sup>n-1</sup>
+    </ol>
+	</q>
+    </div>
+
+	<div class="step" data-x="2000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-magnitud</strong>
+     <ol>
+   <li>El primer bit representa el signo
+   <li>El resto, el valor absoluto
+   </ol>
+   </q>
+    </div>
+
+	<div class="step" data-x="3000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+   <li>7<sub>(10</sub> = 00000111<sub>(2</sub>
+   <li>-7<sub>(10</sub> = 10000111<sub>(2</sub>
+   <li>RR: [-127, 127]
+   </ol>
+   </q>
+    </div>
+
+	<div class="step" data-x="4000" data-y="-1500" data-z="-1500">
+    <q><strong>RR en Signo-Magnitud con n bits</strong>
+     <ol>
+   <li>Hay n bits pero uno es para el signo
+   <br/><strong>&#8680;</strong> El valor absoluto está en n-1 bits
+   <li>RR sin signo n-1 bits: [0, 2<sup>n-1</sup>-1] 
+   <li>RR S-M n bits: [-(2<sup>n-1</sup>-1), 2<sup>n-1</sup>-1]
+   </ol>
+   </q>
+    </div>
+
+
+	<div class="step" data-x="5000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+		<li>9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-128<sub>(10</sub> = ?<sub>(2</sub>
+   </ol>
+   </q>
+   </div>
+
+
+	<div class="step" data-x="5000" data-y="-1500" data-z="-1500">
+    <q><strong>Signo-Magnitud en 8 bits</strong>
+     <ol>
+		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
+		<li>-9<sub>(10</sub> = 10001001<sub>(2</sub>
+		<li>50<sub>(10</sub> = 00110010<sub>(2</sub>
+		<li>-50<sub>(10</sub> = 10110010<sub>(2</sub>
+		<li>-128<sub>(10</sub> = Imposible
+   </ol>
+   </q>
+   </div>
+
+	<div id="sm" class="step" data-x="6000" data-y="-1500" data-z="3000">
+		<ol>
+		</ol>
+    </div>	
+
+
+	<div class="step" data-x="7000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2</strong>
+    <ol>
+		<li><strong>Positivos</strong>
+		<br/>Se representan como en S-M
+		<li><strong>Negativos</strong>
+		<br/>1. Se expresa su valor absoluto
+		<br/>2. Se invierten todos los bits
+		<br/>3. Se suma 1
+    </ol>
+    </q>
+    </div>
+    
+
+	<div class="step" data-x="8000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li><strong>17 es positivo</strong>
+		<br/>17 = 00010001
+		<li><strong>-17 es negativo</strong>
+		<br/>1. 17 = 00010001
+		<br/>2. Invirtiendo, 11101110
+		<br/>3. 11101110 + 1 = 11101111
+    </ol>
+    </div>
+    
+	<div class="step" data-x="9000" data-y="-1500" data-z="-1500">
+    <q><strong>Pasar de C2 en 8 bits a decimal</strong></q>
+    <ol>
+		<li><strong>00010001 es positivo</strong>
+		<br/>00010001 = 17
+		<li><strong>11101111 es negativo</strong>
+		<br/>1. Invirtiendo 1101111 = 0010000
+		<br/>2. 0010000 + 1 = 0010001 = 17
+		<br/>3. -1 * 17 = -17 
+    </ol>
+    </div>
+    
+	<div class="step" data-x="10000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li>9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-9<sub>(10</sub> = ?<sub>(2</sub>
+		<li>50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-50<sub>(10</sub> = ?<sub>(2</sub>
+		<li>-128<sub>(10</sub> = ?<sub>(2</sub>
+    </ol>
+    </div>
+    
+    
+	<div class="step" data-x="10000" data-y="-1500" data-z="-1500">
+    <q><strong>Complemento a 2 en 8 bits</strong></q>
+    <ol>
+		<li>9<sub>(10</sub> = 00001001<sub>(2</sub>
+		<li>-9<sub>(10</sub> = 11110111<sub>(2</sub>
+		<li>50<sub>(10</sub> = 00110010<sub>(2</sub>
+		<li>-50<sub>(10</sub> = 11001110<sub>(2</sub>
+		<li>-128<sub>(10</sub> = 10000000<sub>(2</sub> 
+    </ol>
+    </div>
+    
+    
+	<div class="step" data-x="12000" data-y="-1500" data-z="-1500">
+    <q><strong>RR en C2 con n bits</strong>
+     <ol>
+     <li><strong>-128 = -2<sup>n-1</sup></strong> <strong>&#8680;</strong> ¡era imposible en S-M!
+   <li>RR S-M n bits: [-(2<sup>n-1</sup>-1), 2<sup>n-1</sup>-1]
+   <li>RR C2 n bits: [-(2<sup>n-1</sup>), 2<sup>n-1</sup>-1]
+   <li>El RR de C2 tiene un valor más que el de S-M 
+   </ol>
+   </q>
+    </div>
+   
+	<div id="wtf" class="step" data-x="12000" data-y="-1500" data-z="3000">
+		<ol>
+		</ol>
+    </div>	
+        
+    	
+	<div class="step" data-x="13000" data-y="-1500" data-z="-1500">
+    <q><strong>Ventajas de C2 sobre S-M</strong></q>
+    <ol>
+    	<li>Un valor más en el RR
+		<li>El <strong>cero</strong> tiene una única representación
+		<li>Las cuentas se hacen bit a bit
+		<li>Fácil para la computadora
+    </ol>
+    </div>
+
+	<div class="step" data-x="14000" data-y="-2500" data-z="-1500">
+    <q><strong>Aritmética en complemento a 2</strong></q>
+    <ol>
+    	<br/><strong>A + B</strong>
+		<li>Las cuentas se hacen bit a bit
+		<br/><strong>A - B</strong> 
+		<li>Se complementa B y se suman bit a bit 
+    </ol>
+    </div>
+
+	<div class="step" data-x="15000" data-y="-2500" data-z="-1500">
+    <q><strong>A + B en complemento a 2</strong></q>
+    <ol>
+    	</br>
+    	<li><strong>A = 9, B = 23</strong>
+		<li>A = 00001001, B = 00010111
+		<li>A + B = ?
+    </ol>
+    </div>
+
+	<div class="step" data-x="16000" data-y="-2500" data-z="-1500">
+    <q><strong>A - B en complemento a 2</strong></q>
+    <ol>
+        	</br>
+    	<li><strong>A = 9, B = 23</strong>
+		<li>A = 00001001, B = 00010111
+		<li>-B = c2(B) = 11101001
+		<li>A - B = A + c2(B) = ?
+    </ol>
+    </div>
+
+	<div id="ojoalc2" class="step" data-x="16000" data-y="-1500" data-z="3000">
+		<ol>
+		</ol>
+    </div>	
+        
+	<div class="step" data-x="17000" data-y="-1500" data-z="-1500">
+    <q><strong>Overflow o desbordamiento en C2</strong></q>
+    <ol>		
+    	<li>Puede ocurrir al sumar dos positivos o dos negativos
+    	<li>Nunca ocurre al sumar un + con un -
+		<li>Condición sobre los bits de <strong>carry</strong> o acarreo <strong>&#8680;</strong> ¡ver la teoría!
+    </ol>
+    </div>
+<!-- =============================================================================== -->
+    <div class="step" data-x="-5000" data-y="0" data-z="-1500">
+    <q><strong>Representación de fraccionarios</strong></q>
+    <ol>		
+    	<li>Punto fijo
+    	<li>Punto flotante
+    </ol>
+    </div>
+    
+    
+
+	<div class="step" data-x="-4000" data-y="-0" data-z="-1500">
+    <q><strong>Punto fraccionario</strong></q>
+    <ol>		
+    	<li>En los enteros, está a la derecha y no se escribe
+    	<li>Marca el lugar donde los exponentes de la base se hacen negativos
+    	<li><strong>3.14 = 3 * 10<sup>0</sup> + 1 * 10<sup>-1</sup> + 4 * 10<sup>-2</sup></strong>
+    </ol>
+    </div>
+
+	<div class="step" data-x="-3000" data-y="0" data-z="-1500">
+    <q><strong>Fraccionario en base 2 a decimal</strong></q>
+    <ol>		
+    	<li><strong>
+    	11.101<sub>(2</sub> = 1 * 2<sup>1</sup> + 1 * 2<sup>0</sup> + 1 * 2<sup>-1</sup> + 0 * 2<sup>-2</sup> + 1 * 2<sup>-3</sup>
+= 2 + 1 + 0.5 + 0 + 0.125 = 3.625
+    	</strong>
+    </ol>
+    </div>
+    
+	<div class="step transp" data-x="-2000" data-y="0" data-z="-1500">
+    <q><strong>Decimal fraccionario a base 2</strong></q>
+    <ol>		
+    	<li>Se separan parte entera (PE) y parte fraccionaria (PF)
+    	<li>La PF se multiplica por 2 y se toma la PE del resultado <strong>&#8680;</strong> dígito binario
+    	<li>Se repite el paso anterior hasta llegar a 0 o hasta lograr la precisión deseada
+    </ol>
+    </div>
+    
+    <div class="step transp" data-x="-2500" data-y="500" data-z="1000">
+    <q><strong>Decimal fraccionario a base 2</strong></q>
+    <ol>		
+    	<li>3.625 = PE + PF = 3 + 0.625
+    	<li>PE = 3 <strong>&#8680;</strong> 11<sub>(2</sub>
+    	<li>PF = 0.625 <strong>&#8680;</strong> ?<sub>(2</sub>
+    </ol>
+    </div>
+
+    <div class="step transp" data-x="-1500" data-y="500" data-z="1000">
+    <q><strong>Decimal fraccionario a base 2</strong></q>
+    <ol>		
+    	<li>PF * 2 = 0.625 * 2 = <strong>1</strong>.25 <strong>&#8680;</strong> 1
+    	<li>PF<i>'</i> * 2 = 0.25 * 2 = <strong>0</strong>.5 <strong>&#8680;</strong> 0
+    	<li>PF<i>''</i> * 2 = 0.5 * 2 = <strong>1</strong>.0 <strong>&#8680;</strong> 1
+    	<li>PF = 0.625 <strong>&#8680;</strong> 0.101
+    	<li>3.625 = 3 + 0.625 = 11 + 0.101 = 11.101    	
+    </ol>
+    </div>
+    
+
+    <div class="step" data-x="1000" data-y="0" data-z="-1500">
+    <q><strong>Representación de punto fijo</strong></q>
+    <ol>		
+    	<li>"Punto fijo en ocho dígitos binarios con 3 fraccionarios"
+    	<li>El punto no se escribe pero se asume
+    	<li>00011101 = 00011.101 = 3.625
+    </ol>
+    </div>
+
+    <div class="step" data-x="2000" data-y="0" data-z="-1500">
+    <q><strong>Representación de punto fijo</strong></q>
+    <ol>		
+    	<li>Adecuada para problemas con datos de magnitudes y precisiones similares
+    	<li>Aplicada en matemática financiera, juegos u otros usos
+    	<li>No adecuada para todas las magnitudes o precisiones
+    </ol>
+    </div>
+    
+	<div id="puntofijo" class="step" data-x="2000" data-y="0" data-z="0">
+		<ol>
+		</ol>
+    </div>	
+        
+    
+    
+    <div class="step" data-x="3000" data-y="0" data-z="-1500">
+    <q><strong>Variables diferentes</strong></q>
+    <ol>	
+        <li>"Tiempo en que la luz recorre una millonésima de milímetro"
+    	<li><i>t = e / v</i>
+		<li><i>e</i> = 0.000000001 m
+		<li><i>v</i> = 300000000 m/s
+	</ol>
+    </div>
+    
+    
+    <div class="step" data-x="4000" data-y="0" data-z="-1500">
+    <q><strong>Notación científica</strong></q>
+    <ol>	
+		<li><i>e</i> = 0.000000001 m = 1 * 10<sup>-9</sup> m
+		<li><i>v</i> = 300000000 m/s = 3 * 10<sup>8</sup> m/s
+		<li><i>t = e / v</i> = (1 * 10<sup>-9</sup>) / (3 * 10<sup>8</sup>) s		
+		<li><i>t</i> = 1 / 3 * 10<sup>-9-8</sup> s
+		<li><i>t</i> = 0.333 * 10<sup>-17</sup> s
+	    </ol>
+    </div>
+
+    <div class="step" data-x="5000" data-y="0" data-z="-1500">
+    <q><strong>Notación científica</strong></q>
+    <ol>	
+		<li>Coeficiente = 0.333
+		<li>Exponente = -17
+		<li>Normalizada: 1 <= coeficiente < base
+		<li>0.333 * 10<sup>-17</sup> = 3.33 * 10<sup>-18</sup> s
+	</ol>
+    </div>
+
+
+    <div class="step" data-x="6000" data-y="0" data-z="-1500">
+    <q><strong>Representación en punto flotante</strong></q>
+    <ol>	
+		<li>1 bit de <strong>signo</strong>
+		<li>8 bits para el <strong>exponente</strong>
+		<li>23 bits para la <strong>mantisa</strong>
+		<li><i>IEEE 754 single precision</i>
+	    </ol>
+    </div>
+
+    <div id="ieee754" class="step centered" data-x="6000" data-y="0" data-z="-2500">
+    <q><strong>IEEE 754 single precision</strong></q>
+    <ol>	
+	    </ol>
+    </div>
+
+
+
+    <div class="step transp" data-x="7000" data-y="0" data-z="-1500">
+    <q><strong>Decimal a punto flotante</strong></q>
+    <ol>	
+		<li>1. Escribir el valor absoluto en base 2
+		<li>2. Pasarlo a notación científica en base 2, normalizada
+		<li>3. <strong>Ajustar</strong> el exponente y guardar el signo
+		<li>4. Guardar el coeficiente <strong>sin parte entera</strong> en la mantisa
+	    </ol>
+    </div>
+
+    <div class="step transp" data-x="8000" data-y="500" data-z="0">
+    <q><strong>2. Normalizar not. científica</strong></q>
+    <ol>	
+		<li>Desplazo el punto fraccionario hasta dejar un 1 en la parte entera
+		<li>Compenso la multiplicación o división por 2<sup>algo</sup> que hice
+		<li>101.11 = 1.0111 * 2<sup>2</sup>
+		<li>0.0011111 = 1.1111 * 2<sup>-3</sup>
+    </ol>
+    </div>
+	
+    <div class="step transp" data-x="9000" data-y="1200" data-z="2000">
+    <q><strong>3. Ajustar el exponente</strong></q>
+    <ol>	
+		<li>El exponente puede ser positivo o negativo
+		<li>Representación <strong>en exceso a 127</strong>
+		<li>Se le suma 127 para obtener un número no negativo 
+    </ol>
+    </div>
+
+    <div id="exceso127" class="wide step centered" data-x="8800" data-y="1300" data-z="500">
+    <q><strong>Representación en exceso a 127</strong></q>
+    <ol>	
+    </ol>
+    </div>
+
+	
+<!--    <div class="step transp" data-x="8400" data-y="800" data-z="500"> -->
+    <div class="step transp" data-x="9000" data-y="1200" data-z="2000">
+    <q><strong>3. Ajustar el exponente</strong></q>
+    <ol>	
+		<li>El exponente puede ser positivo o negativo
+		<li>Representación <strong>en exceso a 127</strong>
+		<li>Se le suma 127 para obtener un número no negativo 
+    </ol>
+    </div>
+
+
+    <div class="step transp" data-x="9500" data-y="1500" data-z="3000">
+    <q><strong>4. Guardar la mantisa</strong></q>
+    <ol>	
+		<li>El primer dígito del coeficiente es siempre 1
+		<li><strong>&#8680;</strong> no hace falta almacenarlo
+		<li>Se guarda <strong>coeficiente - 1</strong> completando con ceros
+    </ol>
+    </div>
+    
+    <div class="step" data-x="9500" data-y="2500" data-z="3000">
+    <q><strong>Ejemplo: n = -5.5</strong></q>
+    <ol>	
+		<li>|n| = 5.5<sub>(10</sub> = 101.1<sub>(2</sub>
+		<li>101.1 = 1.011 * 2<sup>2</sup>
+		<li>s = 1
+		<li>e = 2 + 127 = 129
+		<li>1.011 - 1 = .011 <strong>&#8680;</strong> m = 011000...
+    </ol>
+    </div>
+    
+    <div id="ejemplofp" class="wide step centered" data-x="10500" data-y="2500" data-z="3000">
+    <q><strong>Ejemplo: n = -5.5</strong></q>
+    	<br/>
+		s = 1, e = 129, m = 011000...
+    </div>
+    
+    
+    <div id="pfadec" class="wide step centered" data-x="12000" data-y="0" data-z="3000">
+    <q><strong>Punto Flotante a decimal</strong></q>
+    <ol>	
+    	<br/>
+		<strong>n = (-1)<sup>s</sup> * 2<sup>(e-127)</sup> * (1 + m) </strong>
+    </ol>
+    </div>
+    
+    <div id="resumen" class="wide step centered" data-x="8400" data-y="5000" data-z="500">
+    <q><strong>Resumen</strong></q>
+    <ol>	
+    </ol>
+    </div>
+
+	
+    
+    
+<div class="fadetoblack step" data-x="8400" data-y="5000" data-z="500">
+    </div>
+    
+<div class="fadetowhite step" data-x="8400" data-y="5000" data-z="500">
+    </div>
+    
+	
+
+
+	
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+

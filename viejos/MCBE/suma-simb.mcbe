@@ -1,0 +1,10 @@
+# Leer dos datos del teclado y sumarlos
+	LD IN
+	ST DATO
+	LD IN
+	ADD DATO
+	ST OUT
+	HLT
+DATO:	0
+
+

@@ -1,0 +1,8 @@
+  	LD IN 
+OTRO:  	ADD DATO
+  	ST OUT
+  	JMP OTRO
+  	HLT
+DATO:	1
+	NOP
+	JMP OTRO

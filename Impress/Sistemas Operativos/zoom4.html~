@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Zoomable</title>
+    
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+   <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+
+	<script type="text/javascript">
+            function zoom(e) {
+
+				var rect = e.getBoundingClientRect();
+				//console.log(rect.top, rect.right, rect.bottom, rect.left);
+				var w = rect.right - rect.left;
+				var h = rect.bottom - rect.top;
+				var clickX = 100 * (window.event.clientX - rect.left) / w;
+				var clickY = 100 * (window.event.clientY - rect.top) / h;
+     			var prop = ".zoomable img { -webkit-transform-origin: " + clickX + "% " + clickY + "%;}";
+
+				var style = document.createElement('style');
+				style.type = 'text/css';
+				style.innerHTML = prop;
+				document.getElementsByTagName('head')[0].appendChild(style);
+	            e.className = e.className ? '' : 'zoom';
+			}
+
+    </script>
+
+
+	<style>
+		.zoomable {
+		  position: relative;
+		  overflow: hidden;
+		  margin: 1.5em 0 0 0;
+		}
+
+		.zoomable img {	
+		  width: 100%;
+		  height: 80%;
+		  -webkit-transform-origin: 80% 80%; 
+	 	  -webkit-transition: -webkit-transform 1s linear;
+		}
+
+		.zoomable img.zoom {
+	  	-webkit-transform: scale(5);
+	  	-moz-transform: scale(5);
+		}
+	</style>
+
+</head>
+
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<body>
+
+<div id="impress">
+
+	<div class="step" data-x="0" data-y="-1500" data-z="-1500">
+    <q><strong>Demo de zoom</strong></q>
+    </div>
+
+	<div class="zoomable step" data-x="1000" data-y="-1500" data-z="-1500">
+    <q><strong>Click donde quieras</strong></q>
+    		<img onclick="zoom(this)" src="css/bigmb.jpg"/>
+	</div>
+
+	
+</div>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
+
+

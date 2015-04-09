@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Introducción a la Computación 2013</title>
+    
+    <meta name="description" content="Presentación de la materia" />
+    <meta name="author" content="Eduardo Grosclaude" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+-->
+<div id="impress">
+    <!--
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+
+
+
+
+	<div class="centered step" data-x="0" data-y="-1500" data-z="-1500">
+    <strong>Demo de zoom</strong>
+    </div>
+
+
+	<div id="mother1" class="zoomable step" data-x="-1000" data-y="-1500" data-z="-1500" data-rotate-y="10">
+    <q><strong>Motherboard 1</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/motherboard-labelled5.jpg"/>
+	</div>
+
+
+
+
+	<div id="mother2" class="zoomable step" data-x="1500" data-y="-1500" data-z="-1500" data-rotate-y="20">
+    <q><strong>Motherboard 2</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/bigmb.jpg"/>
+	</div>
+
+
+	<div id="mother3" class="zoomable step" data-x="5000" data-y="-1500" data-z="-1500" data-rotate-y="30">
+    <q><strong>Motherboard 3</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/motherboard-callouts.jpg"/>
+	</div>
+
+	<div id="mother4" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/microat.jpg"/>
+	</div>
+
+	<div id="mother5" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/PacketFlow.png"/>
+	</div>
+
+		<div id="mother6" class="zoomable step" data-x="12500" data-y="-1500" data-z="-1500" data-rotate-y="40">
+    <q><strong>Motherboard 4</strong></q>
+    		<img onclick="zoom(this)" onmousemove="pan(this)" src="css/drawing.svg"/>
+	</div>
+</div>
+
+<script src="js/impress.js"></script>
+<script src="js/zoom.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+

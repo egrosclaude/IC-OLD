@@ -1,0 +1,199 @@
+\documentclass[acmtocl]{apunte}
+\RequirePackage[spanish]{babel} %Paquete que incorpora los nombres en español
+\RequirePackage[latin1]{inputenc} %Permite el uso de los acentos y otros símbolos que se requieren en español.
+\selectlanguage{spanish}
+\usepackage{picture}
+\usepackage{listings}
+\usepackage{tikz}
+\usepackage{marvosym}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+
+
+
+% 
+\newtheorem{Cor}{Corollary}
+\newtheorem{Exa}{Ejemplo}[section]
+\newtheorem{Def}[Cor]{Definición} 
+
+
+
+\newcommand{\BibTeX}{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+%% TECNICATURA: Completar con el nombre del Apunte, y su Número (enumerar en forma correlativa los apuntes)
+\title{Nombre del Apunte, Nro Apunte}
+
+%% TECNICATURA: Completar con nombre de Cátedra y Tecnicatura/s a la cual pertenece la cátedra
+\author{Cátedra Introducción a la Programación\\Tecnicatura en Desarrollo de Aplicaciones Web\\
+Facultad de Inform\' atica\\ 
+{\it Buenos Aires 1400 (8300) Neuqu\'en}\\
+{\it Universidad Nacional del Comahue, Argentina} \\
+}
+
+
+\usepackage{graphicx}
+
+% Java Code: 
+\lstdefinelanguage{Java}{morekeywords={public,double,static,void,class,method,int,if,else,new,main,boolean,char},
+keywordstyle=\color{blue}\bfseries\sf,sensitive=false,morecomment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",}
+\lstset{language=Java, basicstyle=\small, numbers=left, numberstyle=\bf, tabsize=2}
+\definecolor{gg}{rgb}{0,90,0} % definicion rgb para un color
+\definecolor{comentarios}{rgb}{150,150,150} 
+\lstset{morecomment=[l][\color{gray}\bfseries\sf]{//}}
+\lstset{stringstyle=\color{orange}\bfseries\sf}
+\lstset{morestring=[b][\color{orange}\bfseries\sf]{"}{"}
+% fin Java Code
+
+
+
+\begin{document}
+\lstset{emph={out},emphstyle=\color{green}}
+
+\newcommand{\marginlabel}[1]{\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}
+
+%
+\marginparwidth = 91pt
+\setcounter{page}{1}
+
+\maketitle
+
+
+\pagestyle{fancy}
+\thispagestyle{empty}
+
+\newcommand{\marginlabel}[1]{\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}
+
+%--------------------------------------------------------------------------------------------------
+
+
+\title{Plan de Actividades}
+%% AUTOR: Completar con el título abreviado para el encabezado de la página
+\titulo{Plan de Actividades}
+
+
+%agregado
+\marginparwidth = 91pt
+\setcounter{page}{1}
+
+% Nota al pie de la primer pagina
+%\begin{bottomstuff}
+%Cátedra de Resolución de Problemas y Algoritmos. 
+%\end{bottomstuff}
+
+\maketitle
+
+\pagestyle{fancy}
+\thispagestyle{fancy}
+\thispagestyle{empty}
+
+%
+\newcommand{\marginlabel}[1]{\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}
+
+\begin{document}
+
+%agregado
+\marginparwidth = 91pt
+\setcounter{page}{1}
+
+% Nota al pie de la primer pagina si fuera necesario
+% \begin{bottomstuff}
+% Cátedra de Resolución de Problemas y Algoritmos. ...
+% \end{bottomstuff}
+\maketitle
+
+
+\pagestyle{fancy}
+\thispagestyle{fancy}
+% Page Headers, left and right.  
+% Utilizo fancyhdr 
+% No alterar las proximas 4 lineas.
+\fancyhead[LE]{}%\sf Plan de Actividades - \rightmark}
+\fancyhead[RO]{\sf Nombre del Apunte - Fecha - TSDAW-TSASSL}%\sf Plan de Actividades - \rightmark}
+\fancyhead[LO]{}%\sf \slshape \leftmark}
+\fancyhead[RE]{\sf Nombre del Apunte - Fecha - TSDAW-TSASSL}%\sf \slshape \leftmark}
+\fancyfoot[C]{\sf \thepage}
+\thispagestyle{empty}
+
+%
+\newcommand{\marginlabel}[1]{\mbox{}\marginpar{\raggedleft\hspace{0pt}#1}}
+\thispagestyle{empty}
+
+%\breakpage
+%\newpage
+% Aqui comienza el recurso y su redacción
+
+\section{Introducción}
+
+\noindent En este apunte...ejemplo de JAVA \\
+
+\begin{lstlisting}
+..				mostrarMenu();
+				opcion = TecladoIn.readLineByte();
+				switch (opcion)
+				{
+				case 1: System.out.print("Ingrese una frase ");
+							cadena = TecladoIn.readLine();
+							break;
+				case 2:System.out.println("La longitud de la frase es: " + cadena.length());
+							break;
+				case 3: verificarHoy();
+							break;
+				case 4: System.out.println("Adios");
+							salir = true;
+							break;
+				default: System.out.println("Le dije entre 1 y 4 ");
+							break;
+				} // fin de switch
+			} // fin de while
+} // fin de principal
+\end{lstlisting}
+
+
+Funciones Matemáticas (MATH)
+Java ofrece un gran número de funciones matemáticas básicas. La siguiente tabla muestra algunas de ellas:
+
+\begin{table}[h]
+\begin{tabular}{|l|l|}
+\hline
+{\bf Método} & {\bf Devuelve} \\ \hline
+static int {\sf abs} (int $num$)                     & valor absoluto de num \\ \hline
+
+static double {\sf acos} (double $num$)              & arco coseno de $num$ \\ 
+static double {\sf asin} (double $num$)              & arco seno de $num$ \\ 
+static double {\sf atan} (double $num$)              & arco tangente de $num$ \\ \hline
+
+static double {\sf cos} (double $angulo$)            & coseno de $angulo$ \\ 
+static double {\sf sin} (double $angulo$)            & seno de $angulo$ \\ 
+static double {\sf tan} (double $angulo$)            & tangente de $angulo$ \\ \hline
+
+static double {\sf ceil} (double $num$)              & techo de num, por ej. el entero más \\ 
+                                             & pequeño mayor o igual a $num$ \\ \hline
+
+static double {\sf exp} (double $pot$)               & valor $e$ a la $pot$ \\ \hline
+
+static double {\sf floor} (double $num$)             & piso de $num$, por ej, el entero más \\ 
+                                 						 & grande menor o igual a $num$ \\ \hline
+
+static double {\sf pow} (double $num$, double $power$) & $num$ elevado a la potencia $power$ \\ \hline
+
+static double {\sf razon} () 											 & número aleatorio entre 0 (inclusive) y 1 (inclusive) \\ \hline
+static double {\sf sqrt} (double $num$) 						 & la raíz de $num$ que debe ser positivo \\ \hline
+
+\end{tabular}
+\end{table}
+
+Ejemplo de referencias \cite{Cant1}.
+Ejemplo de referencias \cite{Hungerford}, 
+Ejemplo de referencias \cite{Ceballos}.
+
+...\\
+...\\...\\...\\...\\...\\...\\...\\...\\...
+%-------------------------------------------------------------------------
+%\nocite{ex1,ex2}
+\bibliographystyle{apalike}
+\bibliography{archivoRef}
+
+
+
+\end{document}
